@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="alert" style="display: none">alert message</div>
     <main>
         <section class="right-section">
             <h1>Mr. or Ms?</h1>
             <form>
                 <label for="input-text"></label>
-                <input  class="text-input" id="input-text" type="text" name="name" maxlength="255" pattern="^[a-zA-Z_ ]*$" title="only english characters or numbers">
+                <input  class="text-input" id="input-text" type="text" name="name" maxlength="255" pattern="^[a-zA-Z_ ]*$" title="only english characters with space">
                 <div>
                     <input id="male-check" value="male" name="gender" type="radio">
                     <label for="male-check">Male</label>

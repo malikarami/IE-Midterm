@@ -1,47 +1,81 @@
 *{
+    /*setting the way we size an element*/
     box-sizing: border-box;
+    /*setting all elements margin and padding to 0*/
+    /*this way we can apply padding and margin wherever we need*/
     padding: 0;
     margin: 0;
+    /*setting the fonts and colors of all elements*/
     font-family: sans-serif;
     color: #4f4f86;
 }
 
 body{
+    /*centering the contents of the body with a flex layout*/
     display: flex;
     justify-content: center;
+    /*setting the background image in a way that covers the whole page*/
     background-image: url("background.png");
-    object-fit: cover;
+    object-fit: contain;
+}
+
+.alert{
+    /*designing the alert message*/
+    /*the alert box is not part of the page's flow cause it is normally hidden and we don't want a jump when it is shown*/
+    position: fixed;
+    height: 50px;
+    /*the width is automatic but never less than 200px*/
+    min-width: 200px;
+    background: purple;
+    border-radius: 20px;
+    /*we need some space above the message*/
+    margin-top: 20px;
+    /*centring the text inside the alert box with flex layout*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
 }
 
 main{
+    /*centering the main container vertically*/
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
+    /*the size is normally half the window size but never less than 300px*/
     width: 50vw;
-    padding: 20px;
     min-width: 300px;
+    padding: 20px;
+    /*setting the layout of the main container*/
     display: flex;
+    /*wrap the elements when their width is larger than the container's*/
     flex-wrap: wrap;
     border-radius: 30px;
+    /*transparent background*/
     background: rgba(178, 178, 234, 0.7);
+    /*a colorful border*/
     box-shadow: rgb(255, 255, 255) 0px 0px 0px 5px, rgb(127, 175, 252) 0px 0px 0px 6px, rgb(255, 255, 255) 0px 0px 0px 11px, rgb(255, 196, 238) 0px 0px 0px 12px;
 }
 
 section{
+    /*setting the layout of all the section elements to display their contents vertically*/
     display: flex;
     flex-direction: column;
 }
 
 .right-section{
+    /*the size of right section compared to the other contents (two of third)*/
     flex: 2 1 auto;
     padding: 20px;
     border-right: 1px dashed #ffffff;
 }
 
 .left-section{
+    /*the size of left section compared to the other contents (one of third)*/
     flex: 1 1 auto;
     padding: 20px;
+    /*the storage and result containers must have space between them*/
     justify-content: space-between;
     border-left: 1px dashed #ffffff;
 }
@@ -51,15 +85,18 @@ section{
 }
 
 form{
+    /*setting the layout of the form*/
     display: flex;
     flex-direction: column;
 }
 
 form > *:not(:last-child){
+    /*giving margin to all of the form contents except for the last one*/
     margin-bottom: 15px;
 }
 
 form > div{
+    /*giving style to radioboxes and their labels as a whole*/
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -79,16 +116,19 @@ button, .submit-button{
 }
 
 button{
+    /*clear and save button are placed on right side of their containers*/
     align-self: flex-end;
     margin-top: 20px;
 }
 
 button:hover, .submit-button:hover{
+    /*the style of buttons when we hover over them*/
     cursor: pointer;
     background: #b2b2ea;
 }
 
 input[type='text']{
+    /*setting the style of the input box*/
     outline: none;
     border: none;
     height: 30px;
@@ -96,19 +136,17 @@ input[type='text']{
     padding-left: 10px;
 }
 
-input[type='text']:invalid::after{
-    content: "invalid";
-    color: red;
-}
-
 p{
+    /*setting the space between paragraphs*/
     margin: 10px;
 }
 
 p > span{
+    /*setting the color of the results*/
     color: purple;
 }
 
 h1{
+    /*setting the color of the headers*/
     color: #3e3e93;
 }
