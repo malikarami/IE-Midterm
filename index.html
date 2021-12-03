@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What is the gender of my name?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section class="right-section">
+            <h1>Mr. or Ms?</h1>
+            <form>
+                <label for="input-text"></label>
+                <input class="text-input" id="input-text" type="text" name="name">
+                <div>
+                    <input id="male-check" value="male" name="gender" type="radio">
+                    <label for="male-check">Male</label>
+                </div>
+                <div>
+                    <input id="female-check" value="female" name="gender" type="radio">
+                    <label for="female-check">Female</label>
+                </div>
+                <input class="submit-button" type="submit" value="Submit">
+                <button class="save-button">save</button>
+            </form>
+        </section>
+        <section class="left-section">
+            <section class="result-section">
+                <h1>Prediction</h1>
+                <p>Gender: <span class="result-gender">result</span></p>
+                <p>Accurate: <span class="result-guess">result</span></p>
+            </section>
+            <section class="storage-section">
+                <h1>Saved Answer</h1>
+                <p>Saved Answer: <span class="storage-value">value</span></p>
+                <button class="clear-button">clear</button>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
+

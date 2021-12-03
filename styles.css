@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #4f4f86;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 50vw;
+    padding: 20px;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    background: rgba(178, 178, 234, 0.45);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 5px, rgb(127, 175, 252) 0px 0px 0px 6px, rgb(255, 255, 255) 0px 0px 0px 11px, rgb(255, 196, 238) 0px 0px 0px 12px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section{
+    flex: 2 1 auto;
+    padding: 20px;
+    border-right: 1px dashed #ffffff;
+}
+
+.left-section{
+    flex: 1 1 auto;
+    padding: 20px;
+    justify-content: space-between;
+    border-left: 1px dashed #ffffff;
+}
+
+.storage-section{
+    margin-top: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form > *:not(:last-child){
+    margin-bottom: 15px;
+}
+
+form > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: white dashed 1px;
+}
+
+form > div > *{
+    margin-left: 10px;
+}
+
+button, .submit-button{
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background: #ddccea;
+}
+
+button{
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+button:hover, .submit-button:hover{
+    cursor: pointer;
+    background: #b2b2ea;
+}
+
+input[type='text']{
+    outline: none;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+p{
+    margin: 10px;
+}
+
+p > span{
+    color: purple;
+}
+
+h1{
+    color: #3e3e93;
+}
