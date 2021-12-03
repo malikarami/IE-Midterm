@@ -9,7 +9,8 @@
 body{
     display: flex;
     justify-content: center;
-    background: rgb(255, 255, 255);
+    background-image: url("background.png");
+    object-fit: cover;
 }
 
 main{
@@ -23,7 +24,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     border-radius: 30px;
-    background: rgba(178, 178, 234, 0.45);
+    background: rgba(178, 178, 234, 0.7);
     box-shadow: rgb(255, 255, 255) 0px 0px 0px 5px, rgb(127, 175, 252) 0px 0px 0px 6px, rgb(255, 255, 255) 0px 0px 0px 11px, rgb(255, 196, 238) 0px 0px 0px 12px;
 }
 
@@ -93,6 +94,11 @@ input[type='text']{
     height: 30px;
     border-radius: 10px;
     padding-left: 10px;
+}
+
+input[type='text']:invalid::after{
+    content: "invalid";
+    color: red;
 }
 
 p{

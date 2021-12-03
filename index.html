@@ -11,7 +11,7 @@
             <h1>Mr. or Ms?</h1>
             <form>
                 <label for="input-text"></label>
-                <input class="text-input" id="input-text" type="text" name="name">
+                <input  class="text-input" id="input-text" type="text" name="name" maxlength="255" pattern="^[a-zA-Z_ ]*$" title="only english characters or numbers">
                 <div>
                     <input id="male-check" value="male" name="gender" type="radio">
                     <label for="male-check">Male</label>
@@ -27,16 +27,17 @@
         <section class="left-section">
             <section class="result-section">
                 <h1>Prediction</h1>
-                <p>Gender: <span class="result-gender">result</span></p>
-                <p>Accurate: <span class="result-guess">result</span></p>
+                <p>Gender: <span class="result-gender"> </span></p>
+                <p>Probability: <span class="result-probability"> </span></p>
             </section>
             <section class="storage-section">
                 <h1>Saved Answer</h1>
-                <p>Saved Answer: <span class="storage-value">value</span></p>
+                <p>Gender: <span class="storage-value"> </span></p>
                 <button class="clear-button">clear</button>
             </section>
         </section>
     </main>
+    <script src="script.js" defer></script>
 </body>
 </html>
 
